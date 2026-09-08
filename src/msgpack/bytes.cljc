@@ -6,7 +6,7 @@
   `DataView` on the other. Writing only one form compiles cleanly and fails
   at runtime on the other host, which is why this library ships two test
   runners rather than one."
-  (:require [clojure.string :as str]))
+  (:require [kotoba.lang.text :as str]))
 
 (defn string->bytes
   "UTF-8 encode to a vector of bytes 0..255."
