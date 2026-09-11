@@ -1,4 +1,4 @@
-#!/usr/bin/env nbb
+#!/usr/bin/env kbb
 ;; Run the suite on the ClojureScript side.
 ;;
 ;; Not a formality. Three things here are a different operation per runtime:
@@ -7,7 +7,7 @@
 ;; `long` reaches 2^63-1 and a ClojureScript number does not, which is why
 ;; this codec refuses the difference rather than letting it show.
 ;;
-;;   nbb --classpath "$(clojure -A:cljs -Spath)" scripts/verify-cljs.cljk
+;;   kbb --backend sci --classpath "$(kbb -A:cljs -Spath)" scripts/verify-cljs.cljk
 (ns verify-cljs
   (:require [clojure.test :as t]
             [msgpack.core-test]))
