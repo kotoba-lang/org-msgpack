@@ -7,7 +7,7 @@
 ;; `long` reaches 2^63-1 and a ClojureScript number does not, which is why
 ;; this codec refuses the difference rather than letting it show.
 ;;
-;;   nbb --classpath "$(clojure -A:cljs -Spath)" scripts/verify-cljs.cljs
+;;   nbb --classpath "$(clojure -A:cljs -Spath)" scripts/verify-cljs.cljk
 (ns verify-cljs
   (:require [clojure.test :as t]
             [msgpack.core-test]))
