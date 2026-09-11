@@ -80,14 +80,14 @@ change here.
 
 ```sh
 clojure -M:test                                                        # JVM
-nbb --classpath "$(clojure -A:cljs -Spath)" scripts/verify-cljs.cljs   # ClojureScript
+nbb --classpath "$(clojure -A:cljs -Spath)" scripts/verify-cljs.cljk   # ClojureScript
 ```
 
 Twenty of the assertions are **known answers from the real
 `@msgpack/msgpack`** — `scripts/gen-mst-vectors.mjs` in
 `kotoba-lang/checkpointer` imports the npm package, encodes a fixed list of
 values, and writes the hex. Both halves are transcribed into
-`test/msgpack/vectors.cljc`: the values from the generator's source, the bytes
+`test/msgpack/vectors.cljk`: the values from the generator's source, the bytes
 from its output. They are the only vectors here with independent provenance,
 and everything else is round-trip — which on its own can only tell an encoder
 that agrees with its own decoder from one that agrees with MessagePack.
